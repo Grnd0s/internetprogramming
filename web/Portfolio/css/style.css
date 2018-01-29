@@ -74,3 +74,6 @@ h1 {
 	font-size: 4em;
 	margin-bottom: 0px;
 }
+#profilePic {
+	border-radius: 100px;
+}
