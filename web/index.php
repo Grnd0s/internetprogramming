@@ -28,7 +28,7 @@ $app->run();
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-   <title>PHP Getting Started on Heroku</title>
+   <title>Grnd0s Dev Center</title>
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -37,6 +37,9 @@ $app->run();
   </head>
   <body>
     <? include('views/nav.html'); ?>
-    <a href="lab1/index.html"><h1>Portfolio</h1></a>
+    <ul>
+      <li><a href="lab1/index.html"><h1>Portfolio</h1></a></li>
+      <li><a href="hw1/index.html"><h1>Homework 1</h1></a></li>
+    </ul>
   </body>
 </html>
