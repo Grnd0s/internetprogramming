@@ -1,11 +1,10 @@
 body {
-	background-color: black;
+	background-color: white;
 	color: gray;
 }
 
 header, main, nav, footer, #content {
 	text-align: center;
-	margin: 0 auto;
 }
 
 nav a {
@@ -13,13 +12,14 @@ nav a {
 	padding-bottom: 4px;
 	font-size: 1.8em;
 	text-decoration: none;
-	color: white;
+	color: gray;
 }
 
 nav a:hover {
 	border-bottom: 2px orange solid;
 	font-size: 2em;
 	transition: .9s;
+	color: black;
 }
 
 #me, #welcomeText {
@@ -27,7 +27,7 @@ nav a:hover {
 }
 
 #welcomeText {
-	text-align: left;
+	text-align: center;
 }
 
 footer {
@@ -71,7 +71,7 @@ ul {
 }
 
 h1 {
-	font-family: 'Pacifico', cursive;
+	font-family: 'Roboto', sans-serif;
 	font-size: 4em;
 	margin-bottom: 0px;
 }
@@ -80,4 +80,7 @@ h1 {
 }
 hr {
 	width: 50%;
+}
+p {
+	font-family: 'Verdana', serif;
 }
