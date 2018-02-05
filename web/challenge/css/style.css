@@ -1,0 +1,94 @@
+body {
+	background-color: black;
+	color: white;
+		font-family: 'Pacifico', cursive;
+}
+
+header, main, nav, footer, #content {
+	text-align: center;
+}
+
+nav a {
+	padding: 15px;
+	padding-bottom: 4px;
+	font-size: 1.8em;
+	text-decoration: none;
+	color: gray;
+}
+
+nav a:hover {
+	border-bottom: 2px orange solid;
+	font-size: 2em;
+	transition: .9s;
+	color: black;
+}
+
+#me, #welcomeText {
+	float: left;
+}
+
+#welcomeText {
+	text-align: center;
+}
+
+footer {
+	clear: left;
+	font-size: 0.8em;
+	color: green;
+}
+
+.current {
+	border-bottom: 2px orange solid;
+}
+
+table {
+	margin: 0px auto;
+}
+
+td {
+	padding-right: 10px;
+	font-size: 1.3em;
+}
+
+td strong {
+	color: orange;
+}
+
+#table-header {
+	background-color: #351a00;
+}
+
+.table-row {
+	background-color: #753900;
+}
+
+ul {
+	text-align: left;
+	padding-left: 200px;
+}
+
+.hobby {
+	color: yellow;
+}
+
+h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 4em;
+	margin-bottom: 0px;
+	color:  yellow;
+}
+#profilePic {
+	border-radius: 100px;
+}
+hr {
+	width: 720px;
+}
+p {
+	font-family: 'Pacifico', cursive;
+}
+a img:hover {
+	width: 400px;
+	height: 300px;
+	transition: .9s;
+	color: black;
+}

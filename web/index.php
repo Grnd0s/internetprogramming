@@ -37,9 +37,15 @@ $app->run();
   </head>
   <body>
     <? include('views/nav.html'); ?>
+    <h1>Labs</h1>
     <ul>
-      <li><a href="lab1/index.html"><h1>Portfolio</h1></a></li>
-      <li><a href="hw1/index.html"><h1>Homework 1</h1></a></li>
+      <li><a href="lab1/index.html"><h2>Portfolio</h2></a></li>
+      <li><a href="lab2/index.php"><h2>Lab 2</h2></a></li>
+    </ul>
+    
+    <h1>Homework</h1>
+    <ul>
+      <li><a href="hw1/index.html"><h2>Homework 1</h2></a></li>
     </ul>
   </body>
 </html>

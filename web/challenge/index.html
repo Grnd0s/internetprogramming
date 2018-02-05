@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+  		<meta charset="utf-8">
+    	<title>The Seasons</title>
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    </head>
+	<body>
+		<header>
+			<h1>The Seasons</h1>
+		</header>
+		<style>
+			main > div#TopImage >a:first-child img {
+				border-radius: 15px 0 0 0;
+			}
+			main > div#TopImage >a:nth-child(2) img {
+				border-radius: 0 15px 0 0;
+			}
+			main > div#bottomImage >a:first-child img {
+				border-radius: 0 0 0 15px;
+			}
+			main > div#bottomImage >a:nth-child(2) img {
+				border-radius: 0 0 15px 0;
+			}
+			main img {
+				width: 350px;
+				height: 250px;
+			}
+			.titles {
+				display: grid;
+				grid-template-columns : 350px 350px;
+				margin: 0 auto;
+				width : 700px;
+			}
+		</style>
+		<main>
+			<div id="TopImage">
+				<a target="_blank" href="http://www.google.com/search?q=spring"><img src="img/spring.png" /></a>
+				<a target="_blank" href="http://www.bing.com/search?q=summer"><img src="img/summer.png"/></a>
+			</div>
+			<div class="titles">
+				<div>Spring</div>
+				<div>Summer</div>
+			</div>
+			<hr>
+			<div id="bottomImage">
+				<a target="_blank" href="http://www.google.com/search?q=autumn"><img src="img/fall.png"/></a>
+				<a target="_blank" href="http://www.bing.com/search?q=winter"><img src="img/winter.png"/></a>
+			</div>
+			<div class="titles">
+				<div>Autumn</div>
+				<div>Winter</div>
+				
+			</div>
+			
+		</main>
+	</body>
+</html>
