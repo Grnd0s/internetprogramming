@@ -8,25 +8,40 @@
     </head>
 	<body>
 		<header>
-			<h1>Pierre Verhaeghe</h1>
+			<h1>Steganography</h1>
+			<p>All you need to know to get started</p>
 		</header>
 		<nav>
 			<hr />
 			<a href="index.html">Home</a>
-			<a href="about.html">About</a>
-			<a href="contact.html" class="current">Contact</a>
+			<a href="theory.html" class="current">Theory</a>
+			<a href="application.html">Application</a>
+			<a href="source.html">Source</a>
 		</nav>
 
 		<br /><br />
 		<div id="content">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5EfJK-VUMm1QCI5EzfEva1Nbv-4DT3imd7Rd7zJ7r0UltYg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			<h1>How Is Steganography Implemented?</h1>
+			<p>There are several different techniques for concealing data inside of normal files. </br>
+			One of the most widely used and perhaps simplest to understand is the least significant bit technique, known commonly as LSB.</p>
+
+			<p>This technique changes the last few bits in a byte to encode a message, which is especially useful in something like an image, where the red, green, and blue values of each pixel are represented by eight bits (one byte) ranging from 0 to 255 in decimal or 00000000 to 11111111 in binary.</br>
+			</br>
+			Changing the last two bits in a completely red pixel from 11111111 to 11111101 only changes the red value from 255 to 253, which to the naked eye creates a nearly imperceptible change in color but still allows us to encode data inside of the picture.</p>
+			<img src="img/theory.jpg" alt="Theory of Steganography"></img></br>
+			<small>This diagram shows two 4-pixel images in both color and binary values. Each block of binary represents the value of the corresponding pixel.</small>
+			<p>
+				The least significant bit technique works well for media files, where slightly changing byte values creates only slight imperceptible changes, but not so well for things like ASCII text, where a single bit out of place will completely change the character.
+				That's not to mention the fact that data hidden using LSB steganography is also easy to detect if someone is looking for it.</p>
+			<p>For this reason, there are a plethora of other steganography techniques out there, each with their own benefits and drawbacks. 
+				Another far less detectable one is called the discrete cosine transform coefficient technique (I know, it's a mouthful), which slightly changes the weights (coefficients) of the cosine waves that are used to reconstruct a JPEG image.
+			</p>
 		</div>
 
 		<footer>
 			<hr>
 			Course Name. 2017&copy; Verhaeghe <br />
-			<strong>Disclaimer:</strong> The information in this webpage is fictitous. <br />
-			It is used for academic puposes only.<br />
+			<strong>Disclaimer:</strong> The information in this webpage is used for academic puposes only. <br />
 			<img src="img/csumb.png" alt="CSUMB Logo">
 		</footer>
 	</body>
