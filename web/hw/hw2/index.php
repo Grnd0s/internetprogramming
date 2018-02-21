@@ -136,7 +136,7 @@ function play($nbreRound, $cards)
         <div id="game">
             <h1 class="rainbow"><b>Paper Rock Scissor</b></h1>
             <?php 
-            play(6, $cards);?>
+            play(20, $cards);?>
             
             <form>
                 <input type="submit" class="btn btn-success" value="Try Again"/>
