@@ -46,7 +46,7 @@ $app->run();
     <h1>Homework</h1>
     <ul>
       <li><a href="hw1/index.html"><h2>Homework 1</h2></a></li>
-      <li><a href="hw/hw2/index.php"><h2>Homework 1</h2></a></li>
+      <li><a href="hw/hw2/index.php"><h2>Homework 2</h2></a></li>
     </ul>
   </body>
 </html>
