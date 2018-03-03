@@ -1,0 +1,19 @@
+body, div  {
+           /*background-image:url("img/border.jpg");*/
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 4em;
+            background-color: black;
+        }
+        
+        h2 {
+            text-align: center;
+            padding: 250px;
+            color: white;
+            display: inline;
+            font-size: 2em;
+        }
+    
