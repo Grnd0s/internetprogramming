@@ -49,8 +49,8 @@
     
     function retrievePlayer($character, $total) 
     {
-        echo "<h3>$character[$total]</h3>";
         echo "<img id='players' src=img/players/$character[$total].png>";
+        echo "<h3>$character[$total]</h3>";
         return $character;
     }
     
@@ -87,6 +87,11 @@
         
         //print_r($players);
         
+        $totalScore = 0;
+        for ($i = 0; $i < count($score); $i++)
+        {
+            $totalScore += $score[$i];
+        }
         $possible_winning_scores_array = array();
         
         for ($index=0; $index<4;$index++){
@@ -99,9 +104,20 @@
         //echo $max_score;
         $winning_index_array = array();
         
+        $nbreOfWinners = 0;
+        $finalScore = $totalScore;
         for($index = 0;$index<4;$index++){
-            if($score[$index]==$max_score){
-                echo "</br><h1>".$players[$index]." WINS!</h1>";
+            if($score[$index]==$max_score)
+            {
+                $nbreOfWinners++;
+                $finalScore -= $max_score;
+                
+            }
+        }
+        for($index = 0;$index<4;$index++){
+            if($score[$index]==$max_score)
+            {
+                echo "</br><h1>".$players[$index]." WINS! With ". $finalScore ." Points!</h1>";
             }
         }
     }
@@ -132,7 +148,7 @@
 	        $playerScore[$i] = $player[$i][count($player[$i])-1];
 	        
 	        array_push($FinalScore, $playerScore[$i]);
-	        echo '<span style="font-size: 30px;"><b>' . $playerScore[$i] . '</b></span>';
+	        echo '<span id="playerPoints" ><b>' . $playerScore[$i] . '</b></span> </br>';
 	        
         }
         
@@ -147,45 +163,55 @@
 
 <!DOCTYPE html>
 <html>
-    <style type="text/css" href ="css/styles.css" rel ="styles">
-    
-  
-    
-    body {
-        background-color: darkgreen;
-    }
-     div  {
-          background-image:url("img/border.jpg");
-          text-align: left;
-          color: red;
+    <style type="text/css" href ="css/style.css" rel ="styles">
+    body, div  {
+           background-image:url("img/border.jpg");
         }
         h1 {
             text-align: center;
             color: white;
             font-size: 4em;
-            background-color: red;
+            background-color: black;
         }
         
         h2 {
             text-align: center;
             padding: 150px;
-            color: red;
+            color: black;
             display: inline;
             font-size: 2em;
         }
         
-        footer, #csumbLogo {
-            text-align: center;
+        h3{
+            padding: 25px;
+            color: white;
+            display: inline;
+            font-size: 2em;
+        }
+        #players{
+            padding-left:35px;
+            padding-top:5px;
         }
         
+        #playerHand{
+            padding: 5px;
+        }
+        #playerPoints{
+            font-size: 50px;
+            color: white;
+            text-align: right;
+            padding-left: 55px;
+        }
     
     </style>
     <head>
         <title>Lab #3: SilverJack Card Game </title>
     </head>
     
-     <h1 style="color:white;"> World Series of Poker</h1>
- 
+     <h1 style="color:powderblue;"> World Series of Poker</h1>
+     <h2 style="color:powderblue;"> Player: </h2>
+     <h2 style="color:powderblue;"> Cards:</h2>
+     <h2 style="color:powderblue;"> Score:</h2>
      
     <div>
       <?php 
@@ -197,13 +223,5 @@
     <body>
 
     </body>
-    
-    <footer>
-        <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
-                <strong> Disclaimer: <strong>
-                  All information in this website belongs to Evert, Pierre, Simirit, and Logan and is used for Academic and Business purposes.
-                  <a href="http://csumb.edu">California State University, Monterey Bay</a>
-                   <p><img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)" /></p>
-    </footer>
     
 </html>
