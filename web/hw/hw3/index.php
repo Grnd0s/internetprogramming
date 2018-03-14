@@ -19,7 +19,7 @@ if (isset($_POST['btn_submit']))
             </div>';
         $error++;
     }
-    if (!isset($_POST['name']))
+    if (!isset($_POST['name']) || empty($_POST['name']))
     {
        echo '<div class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -55,7 +55,7 @@ if (isset($_POST['btn_submit']))
             </div>';
         $error++;
     }
-    if (isset($_POST['email']))
+    if (isset($_POST['email']) && !empty($_POST['email']))
     {
         $email = htmlspecialchars($_POST['email']);
         if (!isEmailValid($email))
