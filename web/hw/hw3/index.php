@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set("SMTP", "aspmx.l.google.com");
-ini_set("sendmail_from", "pverhaeghe@csumb.edu");
-
 $error = 0;
 if (isset($_POST['btn_reset']))
 {
@@ -83,6 +79,7 @@ if (isset($_POST['btn_submit']))
         $email = htmlspecialchars($_POST['email']);
         $name = htmlspecialchars($_POST['name']);
         sendConfirmMail($email, $name);
+        displayResume();
     }
 }
 
@@ -118,6 +115,16 @@ function getTopic($id)
             return "all topic";
     }
 }
+function getGender($id)
+{
+  switch ($id)
+  {
+    case 1:
+      return "Male";
+    default:
+      return "Female";
+  }
+}
 function isEmailValid($email)
 {
     if(!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -139,13 +146,13 @@ function sendConfirmMail($email, $name)
                 
     $dest = $email; 
  
-    $object = "[NEWSLETTER] " . $name . " : successful registration"; // On définit l'objet qui contient la date.
+    $object = "[NEWSLETTER] " . $name . " : successful registration"; 
  
-    // On définit le reste des paramètres.
+    
     $headers  = 'MIME-Version: 1.0' . '\r\n';
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . '\r\n';
-    $headers .= 'From: pverhaeghe@csumb.edu' . '\r\n'; // On définit l'expéditeur.
-    $headers .= 'Bcc:' . $dest . '' . '\r\n'; // On définit les destinataires en copie cachée pour qu'ils ne puissent pas voir les adresses des autres inscrits.
+    $headers .= 'From: pverhaeghe@csumb.edu' . '\r\n'; 
+    $headers .= 'Bcc:' . $dest . '' . '\r\n'; 
     
     if (mail($dest, $object, $message, $headers))
     {
@@ -161,6 +168,19 @@ function sendConfirmMail($email, $name)
             <span class="sr-only">Error:</span>
             Something Wrong happened, the email adress might not working !</div>';
     }
+}
+function displayResume()
+{
+  echo '<div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Successful registration</h3>
+          </div>
+          <div class="panel-body">
+            Welcome <b> ' . htmlspecialchars($_POST['name']) . '</b> and thanks for youre registration to this newsletter ! <br />
+            You have select the ' . getGender($_POST['gender']) . ' gender and you agreed Terms and Conditions ! <br />
+            You have subscribe for ' . getSubscribeTime($_POST['subscribe']) . ' and you have choose ' . getTopic($_POST['topic']) . ' topic ! <br /> 
+          </div>
+        </div>';
 }
 ?>
 
