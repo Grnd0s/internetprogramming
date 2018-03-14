@@ -50,6 +50,7 @@ $app->run();
     <ul>
       <li><a href="hw1/index.html"><h2>Homework 1</h2></a></li>
       <li><a href="hw/hw2/index.php"><h2>Homework 2</h2></a></li>
+      <li><a href="hw/hw3/index.php"><h2>Homework 3</h2></a></li>
     </ul>
   </body>
 </html>
