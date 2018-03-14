@@ -1,5 +1,8 @@
 <?php
 ini_set('display_errors', 1);
+ini_set("SMTP", "aspmx.l.google.com");
+ini_set("sendmail_from", "pverhaeghe@csumb.edu");
+
 $error = 0;
 if (isset($_POST['btn_reset']))
 {
