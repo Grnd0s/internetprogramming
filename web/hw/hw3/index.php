@@ -58,7 +58,7 @@ if (isset($_POST['btn_submit']))
     }
     if (isset($_POST['email']))
     {
-        $email = mysql_escape_string($_POST['email']);
+        $email = htmlspecialchars($_POST['email']);
         if (!isEmailValid($email))
         {
             echo '<div class="alert alert-danger" role="alert">
@@ -77,8 +77,8 @@ if (isset($_POST['btn_submit']))
              You\'ve been successfully register to the newsletter with the email <b>' . $_POST['email'] . '</b> for ' . getSubscribeTime($_POST['subscribe']) . ' to the ' . 
              getTopic($_POST['topic']) . ' topic
             </div>';*/
-        $email = mysql_escape_string($_POST['email']);
-        $name = mysql_escape_string($_POST['name']);
+        $email = htmlspecialchars($_POST['email']);
+        $name = htmlspecialchars($_POST['name']);
         sendConfirmMail($email, $name);
     }
 }
