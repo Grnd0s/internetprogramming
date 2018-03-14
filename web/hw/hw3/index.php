@@ -19,7 +19,7 @@ if (isset($_POST['btn_submit']))
             </div>';
         $error++;
     }
-    if (!isset($_POST['name']) || empty($_POST['name']))
+    if (!isset($_POST['name']) || empty($_POST['name']) || $_POST['name'] == " ")
     {
        echo '<div class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
