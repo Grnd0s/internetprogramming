@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
 $error = 0;
 if (isset($_POST['btn_reset']))
 {
@@ -134,9 +135,8 @@ function sendConfirmMail($email, $name)
                 Thanks for youre registration.";
                 
     $dest = $email; 
-    $date = date("m/d");
  
-    $object = "[NEWSLETTER] " . $date . " : successful registration"; // On définit l'objet qui contient la date.
+    $object = "[NEWSLETTER] " . $name . " : successful registration"; // On définit l'objet qui contient la date.
  
     // On définit le reste des paramètres.
     $headers  = 'MIME-Version: 1.0' . '\r\n';
