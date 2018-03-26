@@ -15,9 +15,9 @@ function displayCart()
             
             echo "<td><img src='" . $item['img'] . "'></td>";
             echo "<td><h4>" . $item['name'] . "</h4></td>";
-            echo "<td><h4>$" . $item['price'] . "</h4>></td>";
+            echo "<td><h4>$" . $item['price'] . "</h4></td>";
             
-            echo '<form method="pos">';
+            echo '<form method="post">';
             echo "<input type='hidden' name='itemId' value='$itemId'>";
             echo "<td><input type='text' name='update' class='form-control' placeHolder='$itemQuant'></td>";
             echo '<td><button class="btn btn-danger">Update</button></td>';
@@ -52,15 +52,15 @@ function displayResults()
             $itemName = $item['name'];
             $itemPrice = $item['salePrice'];
             $itemImage = $item['thumbnailImage'];
-            $itemId = $item['id'];
+            $itemId = $item['itemId'];
             
             echo '<tr>';
             
             echo "<td><img src='" . $itemImage . "'></td>";
             echo "<td><h4>" . $itemName . "</h4></td>";
-            echo "<td><h4>$" . $itemPrice . "</h4>></td>";
+            echo "<td><h4>$" . $itemPrice . "</h4></td>";
             
-            echo '<form method="pos">';
+            echo '<form method="post">';
             echo "<input type='hidden' name='itemName' value='$itemName'>";
             echo "<input type='hidden' name='itemPrice' value='$itemPrice'>";
             echo "<input type='hidden' name='itemImg' value='$itemImage'>";
