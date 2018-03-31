@@ -108,35 +108,71 @@
         </style>
     </head>
     <body>
-        <div class="container center_div">
-        <h1>  OtterMart Product Search </h1>
+        <div class="container">
         
-        <form>
+        
+        
+        <form class="form-horizontal">
         <fieldset>
-            Product: <input type="text" name="product" /><br />
+
+        <!-- Form Name -->
+        <legend style="text-align: center;"><h1>  OtterMart Product Search </h1></legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="product">Product :</label>  
+            <div class="col-md-4">
+                <input id="product" name="product" type="text" placeholder="Input Text" class="form-control input-md">
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="category">Category:</label>
+          <div class="col-md-4">
+            <select id="category" name="category" class="form-control">
+              <option value="">Select One</option>
+              <?=displayCategories()?>
+            </select>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="priceFrom">Price: From:</label>  
+          <div class="col-md-2">
+              <input id="priceFrom" name="priceFrom" type="text" placeholder="" class="form-control input-md">
+          </div>
+          <label class="col-md-1 control-label" for="priceTo">To:</label>  
+          <div class="col-md-2">
+          <input id="priceTo" name="priceTo" type="text" placeholder="" class="form-control input-md">
             
-            Category: 
-                <select name="category">
-                    <option value=""> Select One </option>
-                    <?=displayCategories()?>
-                </select>
-            <br />
-            
-            Price:  From <input type="text" name="priceFrom" size="7"/>
-                    To   <input type="text" name="priceTo" size="7"/>
-                    
-            <br />
-            
-             Order result by:<br />
-             
-             <input type="radio" name="orderBy" value="price"/> Price <br />
-             <input type="radio" name="orderBy" value="name"/> Name
-             
-             <br />
-             <input type="submit" value="Search" name="searchForm" />
-             </fieldset>
+          </div>
+        </div>
+
+        <!-- Multiple Radios -->
+        <div class="form-group">
+          <label class="col-md-5 control-label" for="orderBy">Order Results By:</label>
+          <div class="col-md-4">
+          <div class="radio">
+            <label for="orderBy-0">
+              <input type="radio" name="orderBy" id="orderBy-0" value="name" checked="checked">
+              Product Name
+            </label>
+        	</div>
+          <div class="radio">
+            <label for="orderBy-1">
+              <input type="radio" name="orderBy" id="orderBy-1" value="price">
+              Price
+            </label>
+        	</div>
+          </div>
+        </div>
+        <div class="form-group">
+                     <input type="submit" value="Search" class="col-md-12 btn btn-success" name="searchForm" />
+        </div>
+        </fieldset>
         </form>
-        
         <br />
         <hr>
         
