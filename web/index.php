@@ -38,7 +38,7 @@ $app->run();
   <body>
     <? include('views/nav.html'); ?>
     <h1>Labs</h1>
-    <ul>
+    <ul style="list-style-type: none;">
       <li><a href="lab1/index.html"><h2>Portfolio</h2></a></li>
       <li><a href="lab2/index.php"><h2>Lab 2</h2></a></li>
       <li><a href="labs/lab3/index.php"><h2>Lab 3</h2></a></li>
@@ -49,10 +49,12 @@ $app->run();
     </ul>
     
     <h1>Homework</h1>
-    <ul>
-      <li><a href="hw1/index.html"><h2>Homework 1</h2></a></li>
+    <ul style="list-style-type: none;">
+      <li><a href="hw1/index.html"><h1>Homework 1</h2></a></li>
       <li><a href="hw/hw2/index.php"><h2>Homework 2</h2></a></li>
       <li><a href="hw/hw3/index.php"><h2>Homework 3</h2></a></li>
     </ul>
+    
+    <a href="teamproject/index.php"><button class="btn btn-success">TeamProject</button></a>
   </body>
 </html>
