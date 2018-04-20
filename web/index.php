@@ -46,7 +46,7 @@ $app->run();
       <li><a href="labs/lab5/index.php"><h2>Lab 5</h2></a></li>
       <li><a href="labs/lab6/index.php"><h2>Lab 6</h2></a></li>
       <li><a href="labs/lab7/index.php"><h2>Lab 7</h2></a></li>
-      <li><a href="labs/lab8/index.php"><h2>Lab 8</h2></a></li>
+      <li><a href="labs/lab8/index.html"><h2>Lab 8</h2></a></li>
     </ul>
     
     <h1>Homework</h1>
