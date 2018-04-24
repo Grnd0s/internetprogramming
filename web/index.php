@@ -54,7 +54,7 @@ $app->run();
       <li><a href="hw1/index.html"><h1>Homework 1</h2></a></li>
       <li><a href="hw/hw2/index.php"><h2>Homework 2</h2></a></li>
       <li><a href="hw/hw3/index.php"><h2>Homework 3</h2></a></li>
-      <li><a href="hw/hw4/index.php"><h2>Homework 4</h2></a></li>
+      <li><a href="hw/hw4/index.html"><h2>Homework 4</h2></a></li>
     </ul>
     
     <a href="teamproject/index.php"><button class="btn btn-success btn-lg">TeamProject</button></a><br />
