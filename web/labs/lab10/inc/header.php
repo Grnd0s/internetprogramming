@@ -28,9 +28,9 @@
               <li class="nav-item" id="adoptionsLink">
                 <a class="nav-link" href="adoptions.php">Adoptions</a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a class="nav-link" href="about.php">About Us</a>
-              </li>
+              </li>-->
               
             </ul>
           </div>
