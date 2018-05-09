@@ -1,0 +1,114 @@
+body 
+{
+    background: url(../img/bg.png) no-repeat; 
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+}
+#categoryPage
+{
+    background: url(../img/bg2.jpg) no-repeat; 
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover; 
+background-size: cover;
+background-position: center center; 
+background-attachment: fixed;
+}
+.container 
+{
+    background-color: rgba(255,255,255,0.65);
+    color: #2d3436;
+    margin-top: 10px;
+    font-size: 25px;
+}
+#logo 
+{ 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    width: 80%;
+}
+#logo img
+{
+    width: 150px;
+    height: 250px;
+    position: fixed;
+    right:0;
+    bottom:0;
+}
+#projet{
+    background-color: white;
+    max-width: 1200px;
+    margin: -150px auto 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+h3{
+    color: #222c37;
+    /*font-size: 30px;*/
+    text-align: center;
+    /*font-weight: 100;*/
+    text-transform: uppercase;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#all_projets{
+    padding: 10px 30px;
+    margin: auto;
+    text-align: center;
+}
+.card_projet
+{
+    border-radius: 2px;
+    width: 300px;
+    color: green;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px 10px 5px;
+    display: inline-block;
+    -webkit-box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+}
+.card_projet a
+{
+    color: green;
+}
+.card_projet a:hover
+{
+    text-decoration: none;
+    color: white;
+}
+.voile_card:hover{
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc400+0,8fc400+100;Green+Flat+%236 */
+background: rgb(143,196,0); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(143,196,0,0.5) 0%, rgba(143,196,0,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(143,196,0,0.5) 0%,rgba(143,196,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(143,196,0,0.5) 0%,rgba(143,196,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc400', endColorstr='#8fc400',GradientType=0 ); /* IE6-9 */
+
+}
+
+.voile_card{
+    padding: 85px 0;
+    width: 300px;
+    border-radius: 2px;
+/*background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+/*background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+/*background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#803300ef', endColorstr='#808f23af',GradientType=0 ); /* IE6-9 */
+ /*   transition: all 0.3s;*/
+}
+.voile_card #id
+{
+    margin-top: 0;
+    left: 0;
+}
